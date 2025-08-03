@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yamitala - Beranda</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Kanit:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header id="homeNavbar" class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="img/logo-putih.png" alt="Yamitala Logo" id="logo-img" />
+      </a>
+      <button class="hamburger-menu" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Beranda</a></li>
+          <li><a href="profil.html">Profil</a></li>
+          <li><a href="produk.html">Produk</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-overlay">
+      <h1>Setiap Langkahmu<br>Adalah Petualangan</h1>
+      <p>Dari gunung ke jalan, temani semua aktivitasmu dengan produk Yamitala</p>
+      <a href="produk.html" class="btn-shop">SHOP NOW</a>
+    </div>
+  </section>
+
+  <section class="fitur">
+    <h2>Bukan Sekedar Jaket</h2>
+    <p>Demi menunjang aktivitas-mu, kami berdedikasi untuk mendesain jaket terbaik yang dapat kamu gunakan untuk bermacam aktivitas.</p>
+    <div class="fitur-grid">
+      <div class="fitur-box">
+        <img src="img/icon-fitur-feather.svg" alt="Ringan">
+        <p>Ringan</p>
+      </div>
+      <div class="fitur-box">
+        <img src="img/icon-fitur-water.svg" alt="Anti-Gerak">
+        <p>Anti-Gerah</p>
+      </div>
+      <div class="fitur-box">
+        <img src="img/icon-fitur-wind.svg" alt="Tahan Angin">
+        <p>Tahan Angin</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="testimoni">
+    <h2>Apa Kata Mereka</h2>
+    <div class="testi-wrapper">
+      <div class="testi-container" id="testiContainer">
+        <div class="testi-box">
+          <p>Bangga sih sama brand lokal yg satu ini. Terbilang sangat bagus dan rapih untuk ukuran brand lokal.</p>
+          <span>@senjamengakar07</span>
+        </div>
+        <div class="testi-box">
+          <p>Secara umum sesuai ekspektasi. Ringan dan ringkas, menahan angin dengan cukup baik dan tidak gerah.</p>
+          <span>@lutfu2000</span>
+        </div>
+        <div class="testi-box">
+          <p>Sudah 2x beli dg ukuran yg berbda, dua-duanya bagus mantap tanpa cacat, pelayanan toko juga sangat Gercep..!!!</p>
+          <span>@dede_imaji</span>
+        </div>
+        <div class="testi-box">
+          <p>Bahannya nyaman. Stuff sack include, ringkas, enteng, bahannya kyk asa glitter di dalam, keren.</p>
+          <span>@asakilau_1974</span>
+        </div>
+        <div class="testi-box">
+          <p>Jaket desain bagus, biasanya bagian tangan itu kurang panjang, tapi di Yamitala ukuran tangannya pas. Untuk berat ringan sekali a.k.a ultralight, ada pouch juga...Keren sih ini.</p>
+          <span>@elmun.99</span>
+        </div>
+        <div class="testi-box">
+          <p>Desainnya bagus bagian pinggang ada warna hitamnya jadi kelihatan langsing.</p>
+          <span>@n*****</span>
+        </div>
+      </div>
+      <div class="testi-nav">
+        <button id="prevBtn"><img src="img/icon-pre.svg" alt="Previous"></button>
+        <button id="nextBtn"><img src="img/icon-next.svg" alt="Next"></button>
+      </div>
+    </div>
+  </section>
+
+<footer>
+    <div class="footer-content">
+        <p class="credit">&copy;2025 YAMITALA</p>
+        <div class="socials-right">
+            <a href="https://www.instagram.com/yamitala_official/" target="_blank"><img src="img/icon-ig.svg" alt="Instagram"></a>
+            <a href="https://web.facebook.com/profile.php?id=100063474342756" target="_blank"><img src="img/icon-fb.svg" alt="Facebook"></a>
+            <a href="https://wa.me/6281258010600" target="_blank"><img src="img/icon-wa.svg" alt="WhatsApp"></a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    const navbar = document.getElementById('homeNavbar');
+    const logoImg = document.getElementById('logo-img');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+        logoImg.src = 'img/logo-hitam.png';
+      } else {
+        navbar.classList.remove('scrolled');
+        logoImg.src = 'img/logo-putih.png';
+      }
+    });
+
+    const testiContainer = document.getElementById('testiContainer');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+
+    let currentPosition = 0; 
+    const testimonialBoxes = document.querySelectorAll('.testi-box');
+    const numTestimonials = testimonialBoxes.length; 
+
+    const visibleTestimonials = 2;
+
+
+    function updateNavButtons() {
+      if (currentPosition >= 0) {
+        prevBtn.style.visibility = 'hidden';
+      } else {
+        prevBtn.style.visibility = 'visible';
+      }
+
+      const maxSlidesPossible = Math.ceil(numTestimonials / visibleTestimonials) - 1;
+      const maxNegativeShift = -(maxSlidesPossible * 100);
+
+      if (Math.abs(currentPosition) >= Math.abs(maxNegativeShift) - 1) { 
+        nextBtn.style.visibility = 'hidden';
+      } else {
+        nextBtn.style.visibility = 'visible';
+      }
+
+      if (numTestimonials <= visibleTestimonials) {
+          prevBtn.style.visibility = 'hidden';
+          nextBtn.style.visibility = 'hidden';
+      }
+    }
+
+    updateNavButtons();
+
+    nextBtn.addEventListener('click', () => {
+      const maxSlidesPossible = Math.ceil(numTestimonials / visibleTestimonials) - 1;
+      const maxNegativeShift = -(maxSlidesPossible * 100);
+
+      if (currentPosition > maxNegativeShift) {
+        currentPosition -= 100;
+        testiContainer.style.transform = `translateX(${currentPosition}%)`;
+        updateNavButtons();
+      }
+    });
+
+    prevBtn.addEventListener('click', () => {
+      if (currentPosition < 0) {
+        currentPosition += 100;
+        testiContainer.style.transform = `translateX(${currentPosition}%)`;
+        updateNavButtons();
+      }
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+    const hamburgerBtn = document.querySelector('.hamburger-menu');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburgerBtn.addEventListener('click', function() {
+        hamburgerBtn.classList.toggle('active');
+        navLinks.classList.toggle('active');
+    });
+
+    // Menutup menu saat link diklik (opsional)
+    document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            hamburgerBtn.classList.remove('active');
+            navLinks.classList.remove('active');
+        });
+    });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yamitala - Kontak</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Kanit:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header id="navbar" class="navbar"> 
+    <div class="container">
+      <a href="index.html" class="logo">
+        <img src="img/logo-hitam.png" alt="Yamitala Logo" id="logo-img" /> 
+      </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="profil.html">Profil</a></li>
+          <li><a href="produk.html">Produk</a></li>
+          <li><a href="kontak.html" class="active">Kontak</a></li> 
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+<section class="contact-hero">
+    <div class="contact-hero-overlay">
+      <div class="container">
+        <h1>Kontak Kami</h1>
+      </div>
+    </div>
+</section>
+
+  <section class="contact-details-map-section">
+    <div class="container contact-grid">
+      <div class="contact-info">
+        <div class="contact-item">
+          <img src="img/icon-lokasi.svg" alt="Lokasi"> 
+          <div class="item-text">
+            <h3>Alamat</h3>
+            <p>Komplek Taman Cibaduyut Indah 1, Blok N No 33,<br>Cangkuang Wetan, Kec. Dayeuhkolot, Kabupaten Bandung, Jawa Barat 40236</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <img src="img/icon-telepon.svg" alt="Telepon"> 
+          <div class="item-text">
+            <h3>Kontak</h3>
+            <p>(+62) 08156096656<br>(+62) 081258010600</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <img src="img/icon-mail.svg" alt="Email"> 
+          <div class="item-text">
+            <h3>Email</h3>
+            <p>official.yamitala@gmail.com</p>
+          </div>
+        </div>
+          <div class="contact-item online-shop-item">
+          <img src="img/icon-cart.svg" alt="Online Shop"> 
+          <div class="item-text">
+            <h3>Online Shop</h3>
+            <div class="online-shop-icons">
+            <a href="https://id.shp.ee/TfMC937" target="_blank"><img src="img/icon-shopee.svg" alt="Shopee"></a>
+            <a href="https://www.tokopedia.com/yamitala" target="_blank"><img src="img/icon-tokped.svg" alt="Tokopedia"></a>
+            <a href="https://wa.me/6281258010600" target="_blank"><img src="img/icon-wa-hitam.svg" alt="WhatsApp"></a> 
+            </div>
+          </div>
+        </div>
+        </div>
+
+      <div class="contact-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3960.40228986949!2d107.60446097540793!3d-6.9617799930387125!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e907f80c7769%3A0xeaffb69795907f04!2sYamitala%20Official!5e0!3m2!1sid!2sid!4v1751930069528!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+        <p class="credit">©2025 YAMITALA</p>
+        <div class="socials-right">
+            <a href="https://www.instagram.com/yamitala_official/" target="_blank"><img src="img/icon-ig.svg" alt="Instagram"></a>
+            <a href="https://web.facebook.com/profile.php?id=100063474342756" target="_blank"><img src="img/icon-fb.svg" alt="Facebook"></a>
+            <a href="https://wa.me/6281258010600" target="_blank"><img src="img/icon-wa.svg" alt="WhatsApp"></a>
+        </div>
+    </div>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+ 
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yamitala - Profil</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Kanit:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<header id="navbar" class="navbar"> <div class="container">
+    <a href="index.html" class="logo">
+      <img src="img/logo-hitam.png" alt="Yamitala Logo" id="logo-img" />
+    </a>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="profil.html" class="active">Profil</a></li>
+        <li><a href="produk.html">Produk</a></li>
+        <li><a href="kontak.html">Kontak</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+  <section class="about-hero">
+    <div class="container about-container">
+      <div class="about-text-h1">
+        <h1>Tentang<br>Kami</h1>
+      </div>
+      <div class="about-text">
+        <p>Terinspirasi dari sungai yang terletak di jalur pendakian Gunung Binaiya, Maluku, Yamitala hadir untuk menemani kegiatanmu.</p>
+        <p>Yamitala bukan sekedar brand outdoor. Kita ada buat kamu yang hidup dengan mobilitas tinggi, sport enthusiast, atau yang tertarik oleh cuaca dan situasi. Dari lari pagi di tengah kota sampai trip mendaki di dataran tinggi, jaket kami siap menemani kamu.</p>
+        <p>Kita percaya bahwa setiap orang punya ceritanya masing-masing. Karena itu, kita desain jaket yang ringan, anti-gerah dan tahan angin yang cocok untuk semua kegiatan.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="about-image">
+    <div class="about-image">
+        <img src="img/img-profil-c.jpg" alt="About Us Image" />
+    </div>
+  </section>
+
+  <!-- <section class="quote-section">
+    <div class="container">
+      <h2>"Karena Setiap Gerakmu<br>adalah Cerita"</h2>
+    </div>
+  </section> -->
+
+  <section class="commitment-section">
+    <div class="commitment-title-block">
+      <div class="container">
+        <h2>Komitmen Kami</h2>
+      </div>
+    </div>
+    <div class="container commitment-content">
+      <p class="commitment-subtitle">Untuk mencapai hasil yang signifikan dan berkelanjutan, kami memiliki 8 poin utama yang jadi pedoman dalam setiap langkah kami.</p>
+      <div class="commitment-grid">
+        <div class="commitment-list">
+          <div class="commitment-item">
+            <img src="img/icon-check.svg" alt="Check Icon">
+            <p>Mengembangkan produk dan desain yang berkelanjutan dan berkualitas tinggi</p>
+          </div>
+          <div class="commitment-item">
+            <img src="img/icon-check.svg" alt="Check Icon">
+            <p>Mengurangi dampak lingkungan dari produk kami</p>
+          </div>
+          <div class="commitment-item">
+            <img src="img/icon-check.svg" alt="Check Icon">
+            <p>Secara sistematis mendukung pembelian bahan bersertifikat</p>
+          </div>
+          <div class="commitment-item">
+            <img src="img/icon-check.svg" alt="Check Icon">
+            <p>Menjelajahi rantai pasokan kami dan memahaminya dengan lebih baik</p>
+          </div>
+        </div>
+        <div class="commitment-list">
+          <div class="commitment-item">
+            <img src="img/icon-check.svg" alt="Check Icon">
+            <p>Menjamin keterlacakan bahan yang berasal dari hewan</p>
+          </div>
+          <div class="commitment-item">
+            <img src="img/icon-check.svg" alt="Check Icon">
+            <p>Mempromosikan manufaktur di Indonesia dan Asia</p>
+          </div>
+          <div class="commitment-item">
+            <img src="img/icon-check.svg" alt="Check Icon">
+            <p>Memperkuat layanan purna jual dan departemen perbaikan kami sendiri</p>
+          </div>
+          <div class="commitment-item">
+            <img src="img/icon-check.svg" alt="Check Icon">
+            <p>Berkomitmen pada organisasi nirlaba lingkungan dan sosial</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-content">
+        <p class="credit">&copy;2025 YAMITALA</p>
+        <div class="socials-right">
+            <a href="https://www.instagram.com/yamitala_official/" target="_blank"><img src="img/icon-ig.svg" alt="Instagram"></a>
+            <a href="https://web.facebook.com/profile.php?id=100063474342756" target="_blank"><img src="img/icon-fb.svg" alt="Facebook"></a>
+            <a href="https://wa.me/6281258010600" target="_blank"><img src="img/icon-wa.svg" alt="WhatsApp"></a>
+        </div>
+    </div>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+    const logoImg = document.getElementById('logo-img');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+
+</body>
+</html>

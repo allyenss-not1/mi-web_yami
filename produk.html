@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yamitala - Produk</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&family=Kanit:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header id="navbar" class="navbar"> <div class="container">
+      <a href="index.html" class="logo">
+        <img src="img/logo-hitam.png" alt="Yamitala Logo" id="logo-img" /> </a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="profil.html">Profil</a></li>
+          <li><a href="produk.html" class="active">Produk</a></li>
+          <li><a href="kontak.html">Kontak</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="product-hero">
+    <div class="product-hero-overlay">
+      <div class="container">
+        <h1>Produk</h1>
+        <!-- <p>Bergerak bebas dengan Yamitala, desain bold, bahan premium, multifungsi tapi tetap style approved yang siap menemani kamu!</p> -->
+      </div>
+    </div>
+  </section>
+
+  <section class="product-grid-section">
+    <div class="container">
+      <div class="product-grid">
+        <div class="product-card">
+          <img src="img/img-katalog-putih.jpg" class="img-katalog" alt="Windbreaker Ultralight Mantra - White">
+          <h3>Windbreaker Ultralight Mantra - White</h3>
+          <p>Ringan, waterresist, windproof, packable</p>
+          <span class="price">Rp161.500</span>
+        </div>
+        <div class="product-card">
+          <img src="img/img-katalog-hitam.jpg" class="img-katalog" alt="Windbreaker Ultralight Mantra - Black">
+          <h3>Windbreaker Ultralight Mantra - Black</h3>
+          <p>Ringan, waterresist, windproof, packable</p>
+          <span class="price">Rp161.500</span>
+        </div>
+        <div class="product-card">
+          <img src="img/img-katalog-merah.jpg" class="img-katalog" alt="Windbreaker Ultralight Mantra - Red">
+          <h3>Windbreaker Ultralight Mantra - Red</h3>
+          <p>Ringan, waterresist, windproof, packable</p>
+          <span class="price">Rp161.500</span>
+        </div>
+         <div class="product-card">
+          <img src="img/img-katalog-kuning.jpg" class="img-katalog" alt="Windbreaker Ultralight Mantra - Red">
+          <h3>Windbreaker Ultralight Mantra - Yellow</h3>
+          <p>Ringan, waterresist, windproof, packable</p>
+          <span class="price">Rp161.500</span>
+        </div>
+          <div class="product-card">
+          <img src="img/img-katalog-navy.jpg" class="img-katalog" alt="Windbreaker Ultralight Mantra - Red">
+          <h3>Windbreaker Ultralight Mantra - Navy</h3>
+          <p>Ringan, waterresist, windproof, packable</p>
+          <span class="price">Rp161.500</span>
+        </div>
+          <div class="product-card">
+          <img src="img/img-katalog-maroon.jpg" class="img-katalog" alt="Windbreaker Ultralight Mantra - Red">
+          <h3>Windbreaker Ultralight Mantra - Maroon</h3>
+          <p>Ringan, waterresist, windproof, packable</p>
+          <span class="price">Rp161.500</span>
+        </div>
+      </div>
+      <a href="https://id.shp.ee/TfMC937" target="_blank" class="btn-shop">DISCOVER MORE</a>
+    </div>
+  </section>
+
+  <div id="marketplace-popup" class="popup-overlay">
+  <div class="popup-content">
+    <span class="close-btn">&times;</span>
+    <h3>Temukan kami di <br> marketplace pilihanmu</h3>
+    <div class="marketplace-icons">
+      <a href="https://id.shp.ee/TfMC937" target="_blank">
+        <img src="img/icon-shopee.svg" alt="Shopee">
+      </a>
+      <a href="https://www.tokopedia.com/yamitala" target="_blank">
+        <img src="img/icon-tokped.svg" alt="Tokopedia">
+      </a>
+      <a href="https://wa.me/6281258010600" target="_blank">
+        <img src="img/icon-wa-hitam.svg" alt="WhatsApp">
+      </a>
+    </div>
+  </div>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+        <p class="credit">&copy;2025 YAMITALA</p>
+        <div class="socials-right">
+            <a href="https://www.instagram.com/yamitala_official/" target="_blank"><img src="img/icon-ig.svg" alt="Instagram"></a>
+            <a href="https://web.facebook.com/profile.php?id=100063474342756" target="_blank"><img src="img/icon-fb.svg" alt="Facebook"></a>
+            <a href="https://wa.me/6281258010600" target="_blank"><img src="img/icon-wa.svg" alt="WhatsApp"></a>
+        </div>
+    </div>
+  </footer>
+
+  <script>
+    const navbar = document.getElementById('navbar');
+
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+  const discoverMoreBtn = document.querySelector('.btn-shop');
+  const popup = document.getElementById('marketplace-popup');
+  const closeBtn = document.querySelector('.close-btn');
+
+
+  discoverMoreBtn.addEventListener('click', function(event) {
+    event.preventDefault(); 
+    popup.classList.add('show');
+  });
+
+ 
+  closeBtn.addEventListener('click', function() {
+    popup.classList.remove('show');
+  });
+
+ 
+  window.addEventListener('click', function(event) {
+    if (event.target === popup) {
+      popup.classList.remove('show');
+    }
+  });
+});
+
+  </script>
+</body>
+</html>

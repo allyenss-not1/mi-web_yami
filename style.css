@@ -1175,20 +1175,6 @@ footer {
     font-size: 2.5rem;
   }
 
-  .hero-overlay {
-    padding: 2rem 5rem;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-  
-  .hero-overlay h1,
-  .hero-overlay p {
-    text-align: center;
-  }
-  
-@media (max-width: 992px) {
-
   .navbar .container {
     display: flex;
     flex-direction: row;
@@ -1198,51 +1184,49 @@ footer {
   }
   
   .navbar .logo {
-    margin-bottom: 0;
+    display: block;
   }
-
 
   .hamburger-menu {
-    display: block;
-    padding: 0;
+    display: none;
   }
-  
+
+
   .nav-links {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 70%;
-    height: 100%;
-    background-color: var(--dark-green);
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: right 0.5s ease-in-out;
-    box-shadow: -2px 0 5px rgba(0,0,0,0.2);
-    z-index: 999;
-    
-
-    text-align: center;
-  }
-
-  .nav-links.active {
-    right: 0;
+    position: static;
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    background-color: transparent;
+    box-shadow: none;
+    transition: none;
   }
 
   .nav-links li {
-    margin: 20px 0;
+    margin: 0 20px;
   }
 
   .nav-links a {
-    font-size: 1.5rem;
-    color: var(--white-color);
+    font-size: 1rem;
+    color: var(--dark-color);
   }
-
+  
   .navbar.scrolled .nav-links a {
-    color: var(--white-color);
+    color: var(--dark-color);
   }
-}
-
+  
+  /* Perbaikan hero section agar tidak tertutup navbar */
+  .hero-overlay {
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 2rem 5rem;
+  }
+  
+  .hero-overlay h1,
+  .hero-overlay p {
+    text-align: left;
+  }
+  
   .fitur-grid {
     gap: 30px;
   }
@@ -1348,20 +1332,33 @@ footer {
   }
 
   .navbar {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 0;
   }
   
   .navbar .container {
-    flex-direction: column;
+    max-width: 720;
+    margin: 0 auto;
+    padding: 0 15px;
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+  }
+
+  .navbar .logo img {
+    height: 35px;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
   }
   
   .nav-links li {
-    margin-left: 15px;
-    margin-right: 15px;
+    margin: 0;
   }
-
+  
   .fitur {
     padding: 5rem 0;
   }
@@ -1455,17 +1452,77 @@ footer {
   }
   
   .navbar .container {
-    padding: 0.5rem 0;
+    padding: 0.5rem 15px;
   }
 
+  .navbar .container {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .hamburger-menu {
+    display: block;
+    position: relative;
+    z-index: 1001;
+    background: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+
+  .hamburger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin-bottom: 5px;
+    background-color: var(--dark-color);
+    border-radius: 3px;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+
+   .hamburger-menu.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+  
+  .hamburger-menu.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .hamburger-menu.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+
   .nav-links {
-    flex-wrap: wrap;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100%;
+    background-color: var(--dark-green);
+    flex-direction: column;
     justify-content: center;
-    margin-top: 10px;
+    align-items: center;
+    transition: right 0.5s ease-in-out;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+    z-index: 999;
+  }
+  
+  .nav-links.active {
+    right: 0;
   }
   
   .nav-links li {
-    margin: 0 10px;
+    margin: 20px 0;
+  }
+  
+  .nav-links a {
+    font-size: 1.5rem;
+    color: var(--white-color);
+  }
+  
+  .navbar.scrolled .nav-links a {
+    color: var(--white-color);
   }
 
   .hero-overlay p {

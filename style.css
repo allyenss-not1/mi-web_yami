@@ -940,51 +940,6 @@ footer {
   transform: rotate(45deg) translate(-6px, -6px);
 }
 
-/* Media Query untuk ukuran layar kecil */
-@media (max-width: 992px) {
-  /* Tampilkan hamburger dan sembunyikan link navigasi */
-  .hamburger-menu {
-    display: block;
-  }
-  
-  .navbar .container {
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  .nav-links {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 70%;
-    height: 100%;
-    background-color: var(--dark-green);
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: right 0.5s ease-in-out;
-    padding-top: 5rem;
-    box-shadow: -2px 0 5px rgba(0,0,0,0.2);
-    z-index: 999;
-  }
-
-  .nav-links.active {
-    right: 0; /* Tampilkan menu */
-  }
-
-  .nav-links li {
-    margin: 20px 0;
-  }
-
-  .nav-links a {
-    font-size: 1.5rem;
-  }
-
-  .navbar.scrolled .nav-links a {
-    color: var(--white-color);
-  }
-}
-
 /* Responsive Design */
 @media (min-width: 1441px) and (max-width: 1920px) {
   .container {
@@ -1019,6 +974,7 @@ footer {
 
   .testi-box {
     width: calc(50% - 30px);
+    margin: 0 15px;
   }
   
   .about-container {
